@@ -188,7 +188,8 @@
       if (context.settings.captions === true) {
         var $imgCaption = $entry.find('.caption');
         if ($imgCaption.length === 0) { // Create it if it doesn't exists
-          var caption = $image.attr('alt');
+          var caption = $image.data('caption');
+          if (typeof caption === 'undefined') caption = $entry.attr('alt');
           if (typeof caption === 'undefined') caption = $entry.attr('title');
           if (typeof caption !== 'undefined') { // Create only we found something
             $imgCaption = $('<div class="caption">' + caption + '</div>');
