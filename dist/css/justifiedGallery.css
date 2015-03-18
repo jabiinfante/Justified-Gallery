@@ -108,6 +108,10 @@
   font-weight: 300;
   font-family: sans-serif;
 }
+.justified-gallery > a > .caption > a,
+.justified-gallery > div > .caption > a {
+  color: white;
+}
 .justified-gallery > a > .caption.caption-visible,
 .justified-gallery > div > .caption.caption-visible {
   display: initial;
